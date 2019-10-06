@@ -28,9 +28,11 @@ var pass_length_obj = Number;
 
 
                                         //Establishing password length as number and distibution of char types
-var pass_length = function() {
+var generate = function() {
     pass_length_obj = parseInt(prompt("how long do you want your password to be", "8-20"));
-    
+
+
+                                                                        //Validating char number is int>0                                                                   
     if ( 7<pass_length_obj && pass_length_obj<=20 && pass_length_obj>0)
     {
         console.log(pass_length_obj);
@@ -52,7 +54,6 @@ var pass_length = function() {
 
         pass_item_types/2;
 
-                                                        //Selecting characters
         selector();
     }
     else {
@@ -121,7 +122,8 @@ function compiler()  {
 
     the_password = password.join('');
 
-    document.getElementById("demo").innerHTML = the_password;
+    document.getElementById("the_result").innerHTML = the_password;
+    document.getElementById("copy_pasta").innerHTML = "copy"
 };
 
                                         //shuffling the individual elements of
@@ -134,3 +136,16 @@ function shuffle(array) {
         array[j] = temp;
     }
 }  
+//                                  requires textarea or input fields...
+// function copy_pasta() {
+//     var copyText = document.getElementById("the_result"); 
+//     console.log(1);
+//     console.log(2);
+//     copyText.select(); 
+//     console.log(3);
+//     copyText.setSelectionRange(0, 99999); 
+//     console.log(4); 
+//     document.execCommand("copy"); 
+//     console.log(5);
+//   }
+  
